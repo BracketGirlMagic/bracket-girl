@@ -1,0 +1,13 @@
+{
+  "name":"bracket-girl",
+  "description": "bracket-girl built with generator-react-firebase",
+  "repository": "https://github.com/SabrinaDanielle/bracket-girl",
+  "keywords": [
+    "generator-react-firebase",
+    "react",
+    "redux",
+    "firebase",
+    "redux-firebase",
+    "react-redux-firebase",
+  ]
+}
