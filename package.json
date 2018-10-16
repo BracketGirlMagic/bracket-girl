@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "compile": "node build/scripts/compile",
     "build": "npm run clean && cross-env NODE_ENV=production npm run compile",
-    "build:prod": "echo \"build:prod is deprecated. Use npm run build.\" && npm run build",
+    "build:prod": "npm run build",
     "build:functions": "npm run build --prefix functions",
     "deploy": "firebase-ci deploy -s",
     "createConfig": "firebase-ci createConfig",
