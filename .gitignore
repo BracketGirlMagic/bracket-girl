@@ -17,11 +17,3 @@ functions/etc
 functions/dist
 functions/coverage
 functions/.runtimeconfig.json
-# Tests
-coverage
-cypress/videos
-cypress/screenshots
-cypress.env.json
-cypress/config.json
-functions/mochawesome-report
-serviceAccount.json

@@ -2,8 +2,6 @@
 
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
-[![Code Coverage][coverage-image]][coverage-url]
-[![Code Climate][climate-image]][climate-url]
 [![License][license-image]][license-url]
 [![Code Style][code-style-image]][code-style-url]
 
@@ -14,7 +12,6 @@
 1. [Application Structure](#application-structure)
 1. [Development](#development)
   1. [Routing](#routing)
-1. [Testing](#testing)
 1. [Configuration](#configuration)
 1. [Production](#production)
 1. [Deployment](#deployment)
@@ -35,16 +32,13 @@
     // Overrides for for react-redux-firebase/redux-firestore config
     export const reduxFirebase = {}
     
-    export const analyticsTrackingId = '<- Google Analytics Tracking ID ->'
-    
     export const publicVapidKey = '<- publicVapidKey from Firebase console ->'
 
     export default {
       env,
       firebase,
       reduxFirebase,
-      publicVapidKey,
-      analyticsTrackingId
+      publicVapidKey
     }
     ```
 1. Start Development server: `npm start`
@@ -56,8 +50,6 @@ While developing, you will probably rely mostly on `npm start`; however, there a
 |`start`            |Serves your app at `localhost:3000` and displays [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard)|
 |`start:simple`     |Serves your app at `localhost:3000` without [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard)|
 |`build`            |Builds the application to ./dist|
-|`test`             |Runs unit tests with Karma. See [testing](#testing)|
-|`test:watch`       |Runs `test` in watch mode to re-run tests when changed|
 |`lint`             |[Lints](http://stackoverflow.com/questions/8503559/what-is-linting) the project for potential errors|
 |`lint:fix`         |Lints the project and [fixes all correctable errors](http://eslint.org/docs/user-guide/command-line-interface.html#fix)|
 
@@ -122,9 +114,6 @@ The application structure presented in this boilerplate is **fractal**, where fu
 
 ### Routing
 We use `react-router` [route definitions](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute) (`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
-
-## Testing
-To add a unit test, create a `.spec.js` file anywhere inside of `./tests`. Karma and webpack will automatically find these files, and Mocha and Chai will be available within your test without the need to import them.
 
 ## Production
 

@@ -23,7 +23,7 @@ cache:
     - $HOME/.npm
 
 install:
-  - CYPRESS_INSTALL_BINARY=0 npm i
+  - npm i
   - npm i firebase-tools@4.1.0 firebase-ci@next # install deps used in creating config and deploying
 
 script:

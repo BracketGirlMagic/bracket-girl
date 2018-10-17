@@ -12,7 +12,6 @@ globals:
   __DEV__: false
   __COVERAGE__: false
   __TEST__: false
-  Raven: false
 
 rules:
   semi: [2, 'never']

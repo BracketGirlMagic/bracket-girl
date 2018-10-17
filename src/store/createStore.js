@@ -11,7 +11,6 @@ import 'firebase/firestore'
 import 'firebase/messaging'
 import makeRootReducer from './reducers'
 import { initializeMessaging } from 'utils/firebaseMessaging'
-import { setAnalyticsUser } from 'utils/analytics'
 import { firebase as fbConfig, reduxFirebase as rrfConfig } from '../config'
 import { version } from '../../package.json'
 import { updateLocation } from './location'
@@ -51,8 +50,6 @@ export default (initialState = {}) => {
     useFirestoreForStorageMeta: true, // Metadata associated with storage file uploads goes to Firestore
     onAuthStateChanged: (auth, firebase, dispatch) => {
       if (auth) {
-        // Set auth within analytics
-        setAnalyticsUser(auth)
         // Initalize messaging with dispatch
         initializeMessaging(dispatch)
       }
