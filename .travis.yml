@@ -42,3 +42,7 @@ deploy:
   api_key:
     secure: $HEROKU_KEY
   app: $HEROKU_APP
+
+after_success:
+  - npm i -g firebase-ci
+  - firebase-ci deploy
