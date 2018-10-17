@@ -1,5 +1,39 @@
 {
   "projects": {
     "default": "bracket-girl"
+  },
+  "ci": {
+    "createConfig": {
+      "master": {
+        "env": "staging",
+        "firebase": {
+          "apiKey": "${STAGE_FIREBASE_API_KEY}",
+          "authDomain": "bracket-girl.firebaseapp.com",
+          "databaseURL": "https://bracket-girl.firebaseio.com",
+          "projectId": "bracket-girl",
+          "storageBucket": "bracket-girl.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      },
+      "prod": {
+        "env": "production",
+        "firebase": {
+          "apiKey": "${PROD_FIREBASE_API_KEY}",
+          "authDomain": "bracket-girl.firebaseapp.com",
+          "databaseURL": "https://bracket-girl.firebaseio.com",
+          "projectId": "bracket-girl",
+          "storageBucket": "bracket-girl.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      }
+    }
   }
 }
